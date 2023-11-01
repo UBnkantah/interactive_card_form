@@ -1,0 +1,31 @@
+.inter-lhs{
+  background-image: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.inter-lhs > .front-card{
+  position: relative;
+  margin-left: 30%;
+}
+.inter-lhs> .back-card {
+  position: relative;
+  margin-left: 40%;
+}
+.front-card-details{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
