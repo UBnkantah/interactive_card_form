@@ -27,35 +27,41 @@ function App() {
   return (
     <div className="w-100 h-100 d-flex justify-content-between align-items-center">
       <div className="inter-lhs">
-        <div style={{ width: "400px", height: "200px" }} className="front-card">
+        <div
+          style={{ width: "400px", height: "200px", marginTop: "30px" }}
+          className="front-card"
+        >
           <img src={FrontCard} alt="" className="w-100 h-100" />
           <div className="front-card-details">
             <div>
               <img src={CardLogo} alt="card-img" />
               {/* <img src={IconLogo} alt='icon-img' /> */}
             </div>
-            <p>{number}</p>
-            <div className="d-flex justify-content-between align-items-center">
-              <h6>{name}</h6>
-              <p className="me-auto">{month}/{year}</p>
+            <p className="text-white font-bold pt-4">{number}</p>
+            <div className="d-flex justify-content-between align-items-center pt-3">
+              <h6 className="text-white font-bold">{name}</h6>
+              <p className="text-white font-bold float-right">
+                {month}/{year}
+              </p>
             </div>
           </div>
         </div>
         <div style={{ width: "400px", height: "200px" }} className="back-card">
           <img src={BackCard} alt="" className="w-100 h-100" />
-          <div>
-            <p>{cvc}</p>
+          <div className="back-card-details">
+            <p className="text-dark font-bold">{cvc}</p>
           </div>
         </div>
       </div>
       <div>
         {display ? (
           <Success setDisplay={setDisplay} />
-        ): (
-          <CardForm setDisplay={setDisplay} handleCardDetails={handleCardDetails}/>
+        ) : (
+          <CardForm
+            setDisplay={setDisplay}
+            handleCardDetails={handleCardDetails}
+          />
         )}
-        
-        
       </div>
     </div>
   );
